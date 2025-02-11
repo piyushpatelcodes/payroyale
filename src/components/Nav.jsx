@@ -86,6 +86,7 @@ export default function Nav() {
       setRoles([]);
       Cookies.remove("clashroyale-session");
       sessionStorage.removeItem("user");
+      localStorage.remove("token")
     } catch (error) {
       console.error("Sign out error:", error);
     }

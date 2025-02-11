@@ -24,11 +24,11 @@ export default function Blog() {
   const [filterValues, setFilterValues] = useState({
     day: "4 days",
     fameRewards: [
-      { score: 3500, reward: "$10" },
-      { score: 3400, reward: "$8" },
-      { score: 3200, reward: "$3" },
-      { score: 3500, reward: "$10" },
-      { score: 3400, reward: "$8" },
+      { score: 3600, reward: "40" },
+      { score: 3500, reward: "30" },
+      { score: 3400, reward: "20" },
+      { score: 3300, reward: "16" },
+      { score: 3200, reward: "10" },
      
     ],
   });
@@ -48,7 +48,7 @@ export default function Blog() {
         const response = await axios.get(`${baseURL}/api/test/admin`, {
           withCredentials: true,
         });
-        console.log(response.data);
+        console.log("card auth: ",response.data);
         setIsAuthorized(response.data === "Admin Content.");
       } catch (error) {
         setIsAuthorized(false);
@@ -129,6 +129,11 @@ export default function Blog() {
   };
 
   const handleDownloadCsv = () => {
+    console.log(isAuthorized)
+    if(!isAuthorized){
+      alert("Only Admin Can Download Data")
+      return;
+    }
     const csvHeaders = [
       "Rank",
       "Player Name",

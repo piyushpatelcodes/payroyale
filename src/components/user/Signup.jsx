@@ -40,16 +40,21 @@ export default function SignUp() {
 
   return (
     <div className="flex min-h-screen flex-col justify-center py-12 px-6 lg:px-8 bg-gradient-to-r from-gray-800 via-gray-900 to-black">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
-        <img
-          alt="Your Company"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          className="mx-auto h-10 w-auto"
-        />
+    <div className="sm:mx-auto sm:w-full sm:max-w-md md:max-w-lg lg:max-w-xl flex items-center justify-center gap-2">
+       <img
+        alt="Your Company"
+        src="image.png"
+        className="h-16 w-auto drop-shadow-[0_0_20px_rgba(255,203,107,0.4)]"
+      />
+      <img
+        alt="Your Company"
+        src="clanpicbgremove.png"
+        className="h-16 w-auto drop-shadow-[0_0_20px_rgba(255,255,255,1.0)]"
+      />
+      </div>
         <h2 className="mt-10 text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-9 tracking-tight text-white">
           Create Your Account
         </h2>
-      </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
         <form onSubmit={handleSubmit} className="space-y-6">

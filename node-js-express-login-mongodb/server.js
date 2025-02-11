@@ -13,7 +13,7 @@ const config = {
 };
 
 // const baseURL =  config[process.env.NODE_ENV || 'development'];
-const baseURL =  config['production'];
+const baseURL =  config['development'];
 
 // Middleware for handling CORS
 app.use((req, res, next) => {

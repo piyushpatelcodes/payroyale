@@ -239,12 +239,14 @@ export default function Nav() {
                   )}
                 </div>
                 {!user && (
+
                   <button
                     onClick={handleSignup}
-                    className="block w-24 px-4 py-2 text-sm text-black hover:bg-red-700 hover:rounded-3xl"
+                    className="block w-full px-4 py-2 text-sm text-red-700 hover:bg-red-100"
                   >
                     Sign Up
-                  </button>
+                  </button>                 
+
                 )}
                 {user && (
                   <Menu.Item>

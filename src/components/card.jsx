@@ -23,7 +23,7 @@ export default function Blog() {
   const [fameFilter, setFameFilter] = useState(0);
   const [filterValues, setFilterValues] = useState({
     day: "4 days",
-    fameRewards: [
+    fameRewardscol: [
       { score: 3600, reward: "40" },
       { score: 3500, reward: "30" },
       { score: 3400, reward: "20" },
@@ -31,6 +31,16 @@ export default function Blog() {
       { score: 3200, reward: "10" },
      
     ],
+    fameRewards: [
+      { score: 2700, reward: "20" },
+      { score: 2600, reward: "15" },
+      { score: 2500, reward: "10" },
+      { score: 2400, reward: "8" },
+      { score: 2300, reward: "5" },
+     
+    ],
+    collusionweek:false
+    
   });
 
   const baseURL =
@@ -326,7 +336,7 @@ export default function Blog() {
                       src="/image.png"
                       style={{ width: 90 }}
                       alt="Badge"
-                      className="badge-image"
+                      className="badge-image "
                     />
                     <img
                       src={badgeImage}
@@ -376,7 +386,7 @@ export default function Blog() {
                         Decks Used: {post.decksUsed}
                       </p>
                       <p className="mt-5 line-clamp-3 text-sm leading-6 text-emerald-300 bg-emerald-400/10 group-hover:bg-violet-400/10">
-                        Reward Earned:{" "}
+                        Reward Earned:💲
                         {
                           filterValues.fameRewards.find(
                             (reward) => post.fame >= reward.score

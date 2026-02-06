@@ -17,7 +17,7 @@ const baseURL =  config['production'];
 
 // Middleware for handling CORS
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", baseURL); // Allow your frontend URL
+  // res.header("Access-Control-Allow-Origin", baseURL); // Allow your frontend URL
   res.header("Access-Control-Allow-Credentials", "true"); // Allow credentials (cookies)
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE,PATCH, OPTIONS"); // Allowed methods
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Allowed headers
